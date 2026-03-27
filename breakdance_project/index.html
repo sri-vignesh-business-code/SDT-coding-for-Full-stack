@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Robot Breakdance Battle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🤖 Breakdance Battle 🐶</h1>
+
+<div class="stage">
+
+  <!-- Dancing Robot -->
+  <div class="robot" id="robot">
+    <div class="head"></div>
+    <div class="body"></div>
+    <div class="arm left"></div>
+    <div class="arm right"></div>
+    <div class="leg left"></div>
+    <div class="leg right"></div>
+  </div>
+
+  <!-- Dog Robot -->
+  <div class="dog" id="dog">
+    <div class="dog-head"></div>
+    <div class="dog-body"></div>
+    <div class="dog-leg front-left"></div>
+    <div class="dog-leg front-right"></div>
+    <div class="dog-leg back-left"></div>
+    <div class="dog-leg back-right"></div>
+  </div>
+
+</div>
+
+<div class="controls">
+  <button onclick="startDance()">Start Breakdance</button>
+  <button onclick="stopDance()">Stop</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
