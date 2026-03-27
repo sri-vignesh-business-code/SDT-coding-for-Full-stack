@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0a0a0a;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .calculator {
+    background: #111;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00f7ff;
+  }
+  
+  #display {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #000;
+    color: #00f7ff;
+    box-shadow: 0 0 10px #00f7ff inset;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    gap: 12px;
+  }
+  
+  button {
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  /* Neon colors for different buttons */
+  button:nth-child(1) { color: #ff4d4d; box-shadow: 0 0 10px #ff4d4d; } /* C */
+  button:nth-child(2),
+  button:nth-child(3),
+  button:nth-child(4),
+  button:nth-child(8) { color: #ff00ff; box-shadow: 0 0 10px #ff00ff; } /* operators */
+  
+  button:nth-child(12) { 
+    color: #00ff99; 
+    box-shadow: 0 0 15px #00ff99; 
+  } /* equals */
+  
+  button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px currentColor;
+  }
+  
+  /* Optional glow animation */
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px currentColor; }
+    50% { box-shadow: 0 0 20px currentColor; }
+    100% { box-shadow: 0 0 5px currentColor; }
+  }
+  
+  button {
+    animation: glow 2s infinite;
+  }
