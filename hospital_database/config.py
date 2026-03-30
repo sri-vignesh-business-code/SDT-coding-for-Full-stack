@@ -1,0 +1,5 @@
+MYSQL_HOST = 'localhost'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = 'P@$$w0rd'
+MYSQL_DB = 'hospital_db'
+SECRET_KEY = 'secret123'
