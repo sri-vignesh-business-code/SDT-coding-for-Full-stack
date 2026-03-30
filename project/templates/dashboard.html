@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>💊 Pharmacy Dashboard</h1>
+    <a href="/logout" style="color:white;">Logout</a>
+</div>
+
+<div class="container">
+
+    <!-- STAT CARDS -->
+    <div class="cards">
+        <div class="card blue">
+            <h3>Total Medicines</h3>
+            <p>{{ total_meds }}</p>
+        </div>
+
+        <div class="card green">
+            <h3>Total Stock</h3>
+            <p>{{ total_stock }}</p>
+        </div>
+
+        <div class="card red">
+            <h3>Low Stock</h3>
+            <p>{{ low_stock }}</p>
+        </div>
+    </div>
+
+    <!-- ADD MEDICINE -->
+    <div class="glass">
+        <h2>Add Medicine</h2>
+        <form method="POST" action="/add">
+            <input type="text" name="name" placeholder="Medicine Name" required>
+            <input type="number" name="quantity" placeholder="Quantity" required>
+            <input type="number" name="threshold" placeholder="Threshold" required>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+    <!-- TABLE -->
+    <div class="glass">
+        <h2>Stock Table</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Status</th>
+            </tr>
+
+            {% for med in medicines %}
+            <tr class="{% if med.quantity <= med.threshold %}low{% endif %}">
+                <td>{{ med.name }}</td>
+                <td>{{ med.quantity }}</td>
+                <td>
+                    {% if med.quantity <= med.threshold %}
+                        ⚠ Low Stock
+                    {% else %}
+                        ✅ Good
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

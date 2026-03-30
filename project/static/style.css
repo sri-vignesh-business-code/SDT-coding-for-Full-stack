@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+/* Glass UI */
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Login */
+.login-box {
+    width: 320px;
+    margin: 120px auto;
+    text-align: center;
+    color: white;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.blue { background: #007bff; }
+.green { background: #28a745; }
+.red { background: #dc3545; }
+
+/* Table */
+table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    border-collapse: collapse;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+.low {
+    background-color: #ffdddd;
+}
+
+/* Toast */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #dc3545;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+}
